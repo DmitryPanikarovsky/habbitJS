@@ -1,0 +1,54 @@
+$color-bg: #F3F6FD;
+$icon-hover: #8282f3;
+$basic-color: #5051F9;
+$input-text-color: #8899A8;
+$gray: #768396;
+$border-hover-color: #CAD5FF;
+$filter: brightness(0) invert(1);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    --webkit-font-smoothing: antialiased;
+    --moz-osx-font-smoothig: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 400;
+    background-color: white;
+    color: black;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+ul>li {
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+// .container {
+//     max-width: 1036px;
+//     margin: 0 auto;
+//     padding: 0 12px;
+// }
