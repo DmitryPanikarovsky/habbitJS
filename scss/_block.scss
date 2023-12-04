@@ -1,32 +1,80 @@
 .app {
+    box-shadow: 0px 0px 14px rgba(62, 107, 224, 0.5);
+    border-radius: 20px;
+    overflow: hidden;
     display: flex;
-    min-height: 100vh;
 
     .panel {
         padding: 30px;
-    }
-
-    .logo {
-        margin-bottom: 50px;
-    }
-
-    .navigate {
-        margin-bottom: 25px;
-
-        &__menu {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 25px;
+        background-color: $color-panel-bg;
+        
+        .logo {
+            margin-bottom: 50px;
         }
-    }
-
-    .added {
-        display: flex;
-        justify-content: center;
+    
+        .navigate {
+            margin-bottom: 25px;
+    
+            &__menu {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+            }
+        }
+    
+        .added {
+            display: flex;
+            justify-content: center;
+        }
     }
 
     .content {
         background-color: $color-bg;
+        padding: 45px;
+        min-width: 70vh;
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .progress {
+                padding-top: 5px;
+                width: 235px;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+                &__head {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                &__name {
+                    font-size: 14px;
+                }
+
+                &__percent {
+                    font-size: 12px;
+                }
+
+                &__bar {
+                    width: 100%;
+                    background-color: $border-hover-color;
+                    height: 6px;
+                    border-radius: 3px;
+                    position: relative;
+                }
+                
+                &__cover-bar {
+                    position: absolute;
+                    height: 6px;
+                    border-radius: 3px;
+                    width: 80%;
+                    background-color: $basic-color;
+                }
+            }
+        }
     }
 }

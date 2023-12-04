@@ -38,6 +38,16 @@ button {
 
 .wrapper {
   overflow: hidden;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .button {
@@ -54,29 +64,22 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.button:hover {
+  background-color: #8282f3;
+}
+.button:hover img {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
 }
 .button-navigate {
   -webkit-box-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
           box-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
 }
-.button-navigate:hover {
-  background-color: #8282f3;
-}
-.button-navigate:hover img {
-  -webkit-filter: brightness(0) invert(1);
-          filter: brightness(0) invert(1);
-}
 .button-add {
   border: solid 1px #CAD5FF;
-}
-.button-add:hover {
-  background-color: #8282f3;
-}
-.button-add:hover img {
-  -webkit-filter: brightness(0) invert(1);
-          filter: brightness(0) invert(1);
 }
 .button_active {
   background-color: #5051F9;
@@ -87,21 +90,25 @@ button {
 }
 
 .app {
+  -webkit-box-shadow: 0px 0px 14px rgba(62, 107, 224, 0.5);
+          box-shadow: 0px 0px 14px rgba(62, 107, 224, 0.5);
+  border-radius: 20px;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 100vh;
 }
 .app .panel {
   padding: 30px;
+  background-color: #eff2ff;
 }
-.app .logo {
+.app .panel .logo {
   margin-bottom: 50px;
 }
-.app .navigate {
+.app .panel .navigate {
   margin-bottom: 25px;
 }
-.app .navigate__menu {
+.app .panel .navigate__menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -114,7 +121,7 @@ button {
           align-items: center;
   gap: 25px;
 }
-.app .added {
+.app .panel .added {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -124,4 +131,57 @@ button {
 }
 .app .content {
   background-color: #F3F6FD;
+  padding: 45px;
+  min-width: 70vh;
+}
+.app .content header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.app .content header .progress {
+  padding-top: 5px;
+  width: 235px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+.app .content header .progress__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.app .content header .progress__name {
+  font-size: 14px;
+}
+.app .content header .progress__percent {
+  font-size: 12px;
+}
+.app .content header .progress__bar {
+  width: 100%;
+  background-color: #CAD5FF;
+  height: 6px;
+  border-radius: 3px;
+  position: relative;
+}
+.app .content header .progress__cover-bar {
+  position: absolute;
+  height: 6px;
+  border-radius: 3px;
+  width: 80%;
+  background-color: #5051F9;
 }/*# sourceMappingURL=main.css.map */
