@@ -45,9 +45,10 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 30px;
 }
 
 .button {
@@ -132,7 +133,7 @@ button {
 .app .content {
   background-color: #F3F6FD;
   padding: 45px;
-  min-width: 70vh;
+  width: 900px;
 }
 .app .content header {
   display: -webkit-box;
@@ -146,7 +147,7 @@ button {
           align-items: flex-start;
 }
 .app .content header .progress {
-  padding-top: 5px;
+  padding-top: 2px;
   width: 235px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -184,4 +185,133 @@ button {
   border-radius: 3px;
   width: 80%;
   background-color: #5051F9;
+}
+.app .content .main {
+  margin-top: 30px;
+}
+.app .content .main .days-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.app .content .main .days-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #8282f3;
+}
+.app .content .main .number-day {
+  padding: 20px 0;
+  width: 130px;
+  background-color: #CAD5FF;
+  border-right: 1px solid #8282f3;
+}
+.app .content .main .number-day__text {
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+.app .content .main .comment-day {
+  padding: 0 10px 0 25px;
+  width: 100%;
+}
+.app .content .main .comment-day div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.app .content .main .comment-day__text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+}
+.app .content .main .comment-day__delete {
+  padding: 5px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 4px;
+}
+.app .content .main .comment-day__delete:hover {
+  background-color: #CAD5FF;
+}
+.app .content .main .comment-day__delete:hover img {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+}
+.app .content .main .comment-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+.app .content .main .btn {
+  padding: 12px 33px;
+  border-radius: 9px;
+  font-family: inherit;
+  color: #5051F9;
+  background-color: #CAD5FF;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.app .content .main .btn:hover {
+  background-color: #5051F9;
+  color: white;
+}
+.app .content .main input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: none;
+  border-radius: 9px;
+  font-family: inherit;
+  color: black;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  border: 1px solid #E7EBFB;
+  padding: 0 20px 0 48px;
+}
+.app .content .main input::-webkit-input-placeholder {
+  color: #9ea6ad;
+}
+.app .content .main input::-moz-placeholder {
+  color: #9ea6ad;
+}
+.app .content .main input:-ms-input-placeholder {
+  color: #9ea6ad;
+}
+.app .content .main input::-ms-input-placeholder {
+  color: #9ea6ad;
+}
+.app .content .main input::placeholder {
+  color: #9ea6ad;
+}
+.app .content .main .input-img {
+  position: absolute;
+  top: 10px;
+  left: 22px;
 }/*# sourceMappingURL=main.css.map */

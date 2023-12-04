@@ -32,7 +32,7 @@
     .content {
         background-color: $color-bg;
         padding: 45px;
-        min-width: 70vh;
+        width: 900px;
 
         header {
             display: flex;
@@ -40,7 +40,7 @@
             align-items: flex-start;
 
             .progress {
-                padding-top: 5px;
+                padding-top: 2px;
                 width: 235px;
                 display: flex;
                 flex-direction: column;
@@ -74,6 +74,117 @@
                     width: 80%;
                     background-color: $basic-color;
                 }
+            }
+        }
+
+        .main {
+            margin-top: 30px;
+
+            .days-list {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                margin-bottom: 15px;
+
+            }
+
+            .days-item {
+                display: flex;
+                align-items: center;
+                border-radius: 10px;
+                overflow: hidden;
+                border: 1px solid $icon-hover;
+            }
+
+            .number-day {
+                padding: 20px 0;
+                width: 130px;
+                background-color: $border-hover-color;
+                border-right: 1px solid $icon-hover;
+
+                &__text {
+                    text-align: center;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+
+            .comment-day {
+                padding: 0 10px 0 25px;
+                width: 100%;
+                
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                &__text {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 18px;
+                }
+
+                &__delete {
+                    padding: 5px;
+                    cursor: pointer;
+                    transition: all .2s;
+                    border-radius: 4px;
+
+                    &:hover {
+                        background-color: $border-hover-color;
+
+                        img {
+                            filter: $filter;
+                        }
+                    }
+                }
+            }
+
+            .comment-form {
+                display: flex;
+                gap: 15px;
+                justify-content: space-between;
+                position: relative;
+            }
+
+            .btn {
+                padding: 12px 33px;
+                border-radius: 9px;
+                font-family: inherit;
+                color: $basic-color;
+                background-color: $border-hover-color;
+                cursor: pointer;
+                transition: all .3s;
+
+                &:hover {
+                    background-color: $basic-color;
+                    color: white;
+                }
+            }
+            
+            input {
+                flex: 1;
+                border: none;
+                border-radius: 9px;
+                font-family: inherit;
+                color: black;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                border: 1px solid $day-border-color;
+                padding: 0 20px 0 48px;
+
+                &::placeholder {
+                    color: #9ea6ad;
+                }
+            }
+
+            .input-img {
+                position: absolute;
+                top: 10px;
+                left: 22px;
             }
         }
     }

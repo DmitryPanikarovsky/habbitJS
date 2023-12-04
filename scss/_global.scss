@@ -2,9 +2,12 @@ $color-bg: #F3F6FD;
 $color-panel-bg: #eff2ff;
 $icon-hover: #8282f3;
 $basic-color: #5051F9;
-$input-text-color: #8899A8;
+$input-text-color: #8899A8;;
+$input-text-color: #9ea6ad;
 $gray: #768396;
 $border-hover-color: #CAD5FF;
+$day-bg: #FBFAFF;
+$day-border-color: #E7EBFB;
 $filter: brightness(0) invert(1);
 
 * {
@@ -49,5 +52,6 @@ button {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding: 30px;
 }
