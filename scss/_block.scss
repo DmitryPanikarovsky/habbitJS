@@ -7,6 +7,9 @@
     .panel {
         padding: 30px;
         background-color: $color-panel-bg;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         
         .logo {
             margin-bottom: 50px;
@@ -21,8 +24,49 @@
                 align-items: center;
                 gap: 25px;
             }
+
+            &__item {
+                &_active {
+                    .button {
+                        &-navigate {
+                            background-color: $basic-color;
+                            
+                            img {
+                                filter: $filter;
+                            }
+                        }
+                    }
+                }
+            }
         }
     
+        .button {
+            border-radius: 14px;
+            height: 45px;
+            width: 45px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .2s;
+
+            &:hover {
+                background-color: $icon-hover;
+
+                img {
+                    filter: $filter;
+                }
+            }
+
+            &-navigate {
+                box-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
+            }
+
+            &-add {
+                border: solid 1px $border-hover-color;
+            }
+        }
+
         .added {
             display: flex;
             justify-content: center;
@@ -34,7 +78,7 @@
         padding: 45px;
         width: 900px;
 
-        header {
+        .header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
@@ -62,17 +106,17 @@
                 &__bar {
                     width: 100%;
                     background-color: $border-hover-color;
-                    height: 6px;
                     border-radius: 3px;
+                    height: 6px;
                     position: relative;
                 }
                 
                 &__cover-bar {
-                    position: absolute;
                     height: 6px;
                     border-radius: 3px;
-                    width: 80%;
                     background-color: $basic-color;
+                    position: absolute;
+                    transition: all .5s;
                 }
             }
         }
@@ -97,13 +141,13 @@
             }
 
             .number-day {
-                padding: 20px 0;
+                padding: 20px 0 20px 15px;
                 width: 130px;
                 background-color: $border-hover-color;
                 border-right: 1px solid $icon-hover;
 
                 &__text {
-                    text-align: center;
+                    text-align: left;
                     font-weight: 500;
                     font-size: 14px;
                     line-height: 16px;
@@ -111,7 +155,7 @@
             }
 
             .comment-day {
-                padding: 0 10px 0 25px;
+                padding: 0 8px 0 25px;
                 width: 100%;
                 
                 div {

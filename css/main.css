@@ -51,45 +51,6 @@ button {
   padding: 30px;
 }
 
-.button {
-  border-radius: 14px;
-  height: 45px;
-  width: 45px;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-.button:hover {
-  background-color: #8282f3;
-}
-.button:hover img {
-  -webkit-filter: brightness(0) invert(1);
-          filter: brightness(0) invert(1);
-}
-.button-navigate {
-  -webkit-box-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
-          box-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
-}
-.button-add {
-  border: solid 1px #CAD5FF;
-}
-.button_active {
-  background-color: #5051F9;
-}
-.button_active img {
-  -webkit-filter: brightness(0) invert(1);
-          filter: brightness(0) invert(1);
-}
-
 .app {
   -webkit-box-shadow: 0px 0px 14px rgba(62, 107, 224, 0.5);
           box-shadow: 0px 0px 14px rgba(62, 107, 224, 0.5);
@@ -102,6 +63,16 @@ button {
 .app .panel {
   padding: 30px;
   background-color: #eff2ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .app .panel .logo {
   margin-bottom: 50px;
@@ -122,6 +93,44 @@ button {
           align-items: center;
   gap: 25px;
 }
+.app .panel .navigate__item_active .button-navigate {
+  background-color: #5051F9;
+}
+.app .panel .navigate__item_active .button-navigate img {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+}
+.app .panel .button {
+  border-radius: 14px;
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.app .panel .button:hover {
+  background-color: #8282f3;
+}
+.app .panel .button:hover img {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+}
+.app .panel .button-navigate {
+  -webkit-box-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
+          box-shadow: 0px 8px 14px rgba(62, 107, 224, 0.12);
+}
+.app .panel .button-add {
+  border: solid 1px #CAD5FF;
+}
 .app .panel .added {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -135,7 +144,7 @@ button {
   padding: 45px;
   width: 900px;
 }
-.app .content header {
+.app .content .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -146,7 +155,7 @@ button {
       -ms-flex-align: start;
           align-items: flex-start;
 }
-.app .content header .progress {
+.app .content .header .progress {
   padding-top: 2px;
   width: 235px;
   display: -webkit-box;
@@ -158,7 +167,7 @@ button {
           flex-direction: column;
   gap: 12px;
 }
-.app .content header .progress__head {
+.app .content .header .progress__head {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -166,25 +175,26 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.app .content header .progress__name {
+.app .content .header .progress__name {
   font-size: 14px;
 }
-.app .content header .progress__percent {
+.app .content .header .progress__percent {
   font-size: 12px;
 }
-.app .content header .progress__bar {
+.app .content .header .progress__bar {
   width: 100%;
   background-color: #CAD5FF;
-  height: 6px;
   border-radius: 3px;
+  height: 6px;
   position: relative;
 }
-.app .content header .progress__cover-bar {
-  position: absolute;
+.app .content .header .progress__cover-bar {
   height: 6px;
   border-radius: 3px;
-  width: 80%;
   background-color: #5051F9;
+  position: absolute;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .app .content .main {
   margin-top: 30px;
@@ -212,19 +222,19 @@ button {
   border: 1px solid #8282f3;
 }
 .app .content .main .number-day {
-  padding: 20px 0;
+  padding: 20px 0 20px 15px;
   width: 130px;
   background-color: #CAD5FF;
   border-right: 1px solid #8282f3;
 }
 .app .content .main .number-day__text {
-  text-align: center;
+  text-align: left;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
 }
 .app .content .main .comment-day {
-  padding: 0 10px 0 25px;
+  padding: 0 8px 0 25px;
   width: 100%;
 }
 .app .content .main .comment-day div {
