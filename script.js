@@ -99,7 +99,9 @@ function rerenderContent(activeHabbit) {
 
 function rerender(activeHabbitId) {
     globalActiveHabbitId = activeHabbitId;
-    const activeHabbit = habbits.find(habbit => habbit.id === activeHabbitId);
+    const activeHabbit = habbits.find(habbit => {
+        return habbit.id === activeHabbitId;
+    });
     if (!activeHabbit) {
         return;
     }
