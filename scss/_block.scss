@@ -7,9 +7,6 @@
     .panel {
         padding: 30px;
         background-color: $color-panel-bg;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         
         .logo {
             margin-bottom: 50px;
@@ -222,6 +219,10 @@
 
                 &::placeholder {
                     color: #9ea6ad;
+                }
+
+                &.error {
+                    border: 1px solid red;
                 }
             }
 

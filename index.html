@@ -21,7 +21,7 @@
                 </div>
                 <nav class="navigate">
                     <ul class="navigate__menu">
-
+                
                     </ul>
                 </nav>
                 <div class="added">
@@ -44,18 +44,18 @@
                     </div>
                 </header>
                 <main class="main">
-                    <div class="days-list">
+                    <ul class="days-list">
                         
-                    </div>
+                    </ul>
                     <div class="days-item">
                         <div class="number-day">
                             <div class="number-day__text"></div>
                         </div>
                         <div class="comment-day">
-                            <form class="comment-form">
-                                <input type="text" placeholder="Комментарий...">
+                            <form class="comment-form" onsubmit="addDays(event)">
+                                <input name="comment" type="text" placeholder="Комментарий...">
                                 <img src="./img/icons/comment.svg" alt="Иконка комментария" class="input-img">
-                                <button class="btn">Готово</button>
+                                <button class="btn" type="submit">Готово</button>
                             </form>
                         </div>
                     </div>
