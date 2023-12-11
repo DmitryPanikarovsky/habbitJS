@@ -26,7 +26,7 @@
                         </ul>
                     </nav>
                     <div class="added">
-                        <button class="button button-add">
+                        <button class="button button-add" onclick="togglePopup()">
                             <img src="./img/icons/add.svg" alt="Иконка добавить" class="menu-add__img">
                         </button>
                     </div>
@@ -67,6 +67,47 @@
                         </div>
                     </div>
                 </main>
+            </div>
+            <div class="cover cover_hidden" id="add-habbit-popup">
+                <div class="popup">
+                    <h2>Новая привычка</h2>
+                    <div class="icon-label">Иконка</div>
+                    <ul class="icon-list">
+                        <li class="icon-list__item icon-list__item_active">
+                            <button class="icon-list__button">
+                                <img src="./img/icons/sport.svg" alt="Спорт">
+                            </button>
+                        </li>
+                        <li class="icon-list__item">
+                            <button class="icon-list__button">
+                                <img src="./img/icons/water.svg" alt="Вода">
+                            </button>
+                        </li>
+                        <li class="icon-list__item">
+                            <button class="icon-list__button">
+                                <img src="./img/icons/food.svg" alt="Еда">
+                            </button>
+                        </li>
+                    </ul>
+                    <form class="popup__form">
+                        <input 
+                            type="text" 
+                            name="name" 
+                            placeholder="Название" 
+                            autocomplete="off"
+                        >
+                        <input 
+                            type="number" 
+                            name="target" 
+                            placeholder="Цель" 
+                            autocomplete="off"
+                        >
+                    </form>
+                    <button class="cover-button" type="submit">Добавить</button>
+                    <div class="close" onclick="togglePopup()">
+                        <img src="./img/icons/cross.svg" alt="Закрытие окна">
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -17,6 +17,9 @@ const page = {
     content: {
         daysContainer: document.querySelector('.days-list'),
         nextDay: document.querySelector('.number-day__text')
+    },
+    popup: {
+        index: document.getElementById('add-habbit-popup')
     }
 }
 
@@ -26,7 +29,7 @@ const page = {
 function loadData() {
     const habbitsString = localStorage.getItem(HABBIT_KEY);
     const habbitArray = JSON.parse(habbitsString);
-    if(Array.isArray(habbitArray)) {
+    if (Array.isArray(habbitArray)) {
         habbits = habbitArray;
     }
 }
@@ -35,13 +38,21 @@ function saveData() {
     localStorage.setItem(HABBIT_KEY, JSON.stringify(habbits));
 }
 
+function togglePopup() {
+    if (page.popup.index.classList.contains('cover_hidden')) {
+        page.popup.index.classList.remove('cover_hidden');
+    } else {
+        page.popup.index.classList.add('cover_hidden');
+    }
+}
+
 
 /* render */
 
 function rerenderMenu(activeHabbit) {
-    for(const habbit of habbits) {
+    for (const habbit of habbits) {
         const existed = document.querySelector(`[menu-habbit-id="${habbit.id}"]`);
-        if(!existed) {
+        if (!existed) {
             const element = document.createElement('li');
             element.setAttribute('menu-habbit-id', habbit.id);
             element.classList.add('navigate__item');
@@ -51,7 +62,7 @@ function rerenderMenu(activeHabbit) {
                     <img src="./img/icons/${habbit.icon}.svg" alt="${habbit.name}" class="navigate__img">
                 </button>
             `;
-            if(activeHabbit.id === habbit.id) {
+            if (activeHabbit.id === habbit.id) {
                 element.classList.add('navigate__item_active');
             }
             page.menu.appendChild(element);

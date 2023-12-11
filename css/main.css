@@ -320,4 +320,168 @@ button {
   position: absolute;
   top: 10px;
   left: 22px;
+}
+.app .cover {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.app .cover_hidden {
+  display: none;
+}
+.app .popup {
+  max-width: 424px;
+  background-color: #fff;
+  padding: 22px 22px 42px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+.app .popup h2 {
+  font-size: 24px;
+  line-height: 27px;
+  text-align: center;
+}
+.app .popup .icon-label {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  margin-top: 20px;
+  color: #768396;
+  text-align: center;
+}
+.app .popup .icon-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px;
+}
+.app .popup .icon-list__button {
+  border-radius: 14px;
+  height: 45px;
+  width: 45px;
+  border: 1px solid #5051F9;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.app .popup .icon-list__button:hover {
+  background-color: #8282f3;
+}
+.app .popup .icon-list__button:hover img {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+}
+.app .popup .icon-list__item_active .icon-list__button {
+  background-color: #5051F9;
+}
+.app .popup .icon-list__item_active .icon-list__button:hover {
+  background-color: #8282f3;
+}
+.app .popup .icon-list__item_active .icon-list__button img {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+}
+.app .popup__form {
+  margin: 18px 0;
+  width: 380px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 7px;
+}
+.app .popup__form input {
+  border: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 9px;
+  border: 1px solid #E7EBFB;
+  font-family: inherit;
+  color: black;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 12px 20px;
+}
+.app .popup__form input::-webkit-input-placeholder {
+  color: #9ea6ad;
+}
+.app .popup__form input::-moz-placeholder {
+  color: #9ea6ad;
+}
+.app .popup__form input:-ms-input-placeholder {
+  color: #9ea6ad;
+}
+.app .popup__form input::-ms-input-placeholder {
+  color: #9ea6ad;
+}
+.app .popup__form input::placeholder {
+  color: #9ea6ad;
+}
+.app .popup .cover-button {
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  color: #5051F9;
+  padding: 12px 24px;
+  background-color: #EDECFE;
+  margin: 0 auto;
+  border-radius: 9px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.app .popup .cover-button:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+.app .popup .close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}
+.app .popup .close:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }/*# sourceMappingURL=main.css.map */
