@@ -337,6 +337,8 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 .app .cover_hidden {
   display: none;

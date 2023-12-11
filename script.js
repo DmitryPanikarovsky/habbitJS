@@ -38,6 +38,7 @@ function saveData() {
     localStorage.setItem(HABBIT_KEY, JSON.stringify(habbits));
 }
 
+/*
 function togglePopup() {
     if (page.popup.index.classList.contains('cover_hidden')) {
         page.popup.index.classList.remove('cover_hidden');
@@ -45,7 +46,11 @@ function togglePopup() {
         page.popup.index.classList.add('cover_hidden');
     }
 }
+*/
 
+function togglePopup() {
+    page.popup.index.classList.toggle('cover_hidden');
+}
 
 /* render */
 

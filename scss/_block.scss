@@ -249,6 +249,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: all .4s;
 
         &_hidden {
             display: none;
