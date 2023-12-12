@@ -408,13 +408,13 @@ button {
   -webkit-filter: brightness(0) invert(1);
           filter: brightness(0) invert(1);
 }
-.app .popup .icon-list__item_active .icon-list__button {
+.app .popup .icon-list__button_active {
   background-color: #5051F9;
 }
-.app .popup .icon-list__item_active .icon-list__button:hover {
+.app .popup .icon-list__button_active:hover {
   background-color: #8282f3;
 }
-.app .popup .icon-list__item_active .icon-list__button img {
+.app .popup .icon-list__button_active img {
   -webkit-filter: brightness(0) invert(1);
           filter: brightness(0) invert(1);
 }

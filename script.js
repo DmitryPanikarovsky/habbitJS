@@ -19,7 +19,8 @@ const page = {
         nextDay: document.querySelector('.number-day__text')
     },
     popup: {
-        index: document.getElementById('add-habbit-popup')
+        index: document.querySelector('.cover'),
+        iconField: document.querySelector('.popup__form input[name="icon"]')
     }
 }
 
@@ -163,6 +164,16 @@ function deleteDay(index) {
     });
     rerender(globalActiveHabbitId);
     saveData();
+}
+
+
+/* work with habbbit */
+
+function setIcon(context, icon) {
+    page.popup.iconField.value = icon;
+    const iconActive = document.querySelector('.icon-list__button.icon-list__button_active');
+    iconActive.classList.remove('icon-list__button_active');
+    context.classList.add('icon-list__button_active');
 }
 
 

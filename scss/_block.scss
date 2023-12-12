@@ -305,23 +305,19 @@
                         filter: $filter;
                     }
                 }
-            }
 
-            &__item {
                 &_active {
-                    .icon-list__button {
-                        background-color: $basic-color;
-
-                        &:hover {
-                            background-color: $icon-hover;;
-                        }
-        
-                        img {
-                            filter: $filter;
-                        }
+                    background-color: $basic-color;
+    
+                    &:hover {
+                        background-color: $icon-hover;;
                     }
+    
+                    img {
+                        filter: $filter;
+                    } 
                 }
-            } 
+            }
         }
 
         &__form {

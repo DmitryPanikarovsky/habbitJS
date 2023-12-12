@@ -73,18 +73,18 @@
                     <h2>Новая привычка</h2>
                     <div class="icon-label">Иконка</div>
                     <ul class="icon-list">
-                        <li class="icon-list__item icon-list__item_active">
-                            <button class="icon-list__button">
+                        <li class="icon-list__item">
+                            <button class="icon-list__button icon-list__button_active" onclick="setIcon(this, 'sport')">
                                 <img src="./img/icons/sport.svg" alt="Спорт">
                             </button>
                         </li>
                         <li class="icon-list__item">
-                            <button class="icon-list__button">
+                            <button class="icon-list__button" onclick="setIcon(this, 'water')">
                                 <img src="./img/icons/water.svg" alt="Вода">
                             </button>
                         </li>
                         <li class="icon-list__item">
-                            <button class="icon-list__button">
+                            <button class="icon-list__button" onclick="setIcon(this, 'food')">
                                 <img src="./img/icons/food.svg" alt="Еда">
                             </button>
                         </li>
@@ -95,6 +95,14 @@
                             name="name" 
                             placeholder="Название" 
                             autocomplete="off"
+                        >
+                        <input 
+                            type="text" 
+                            name="icon"
+                            hidden
+                            placeholder="Название" 
+                            autocomplete="off"
+                            value="sport"
                         >
                         <input 
                             type="number" 
