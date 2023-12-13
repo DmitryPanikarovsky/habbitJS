@@ -22,7 +22,7 @@
                     </div>
                     <nav class="navigate">
                         <ul class="navigate__menu">
-                    
+
                         </ul>
                     </nav>
                     <div class="added">
@@ -47,7 +47,7 @@
                 </header>
                 <main class="main">
                     <ul class="days-list">
-                        
+
                     </ul>
                     <div class="days-item">
                         <div class="number-day">
@@ -55,12 +55,7 @@
                         </div>
                         <div class="comment-day">
                             <form class="comment-form" onsubmit="addDays(event)">
-                                <input 
-                                    name="comment" 
-                                    type="text" 
-                                    placeholder="Комментарий..."
-                                    autocomplete="off"
-                                    >
+                                <input name="comment" type="text" placeholder="Комментарий..." autocomplete="off">
                                 <img src="./img/icons/comment.svg" alt="Иконка комментария" class="input-img">
                                 <button class="btn" type="submit">Готово</button>
                             </form>
@@ -89,29 +84,12 @@
                             </button>
                         </li>
                     </ul>
-                    <form class="popup__form">
-                        <input 
-                            type="text" 
-                            name="name" 
-                            placeholder="Название" 
-                            autocomplete="off"
-                        >
-                        <input 
-                            type="text" 
-                            name="icon"
-                            hidden
-                            placeholder="Название" 
-                            autocomplete="off"
-                            value="sport"
-                        >
-                        <input 
-                            type="number" 
-                            name="target" 
-                            placeholder="Цель" 
-                            autocomplete="off"
-                        >
+                    <form class="popup__form" onsubmit="addHabbit(event)">
+                        <input type="text" name="name" placeholder="Название" autocomplete="off">
+                        <input type="text" name="icon" hidden placeholder="Название" autocomplete="off" value="sport">
+                        <input type="number" name="target" placeholder="Цель" autocomplete="off">
+                        <button class="cover-button" type="submit">Добавить</button>
                     </form>
-                    <button class="cover-button" type="submit">Добавить</button>
                     <div class="close" onclick="togglePopup()">
                         <img src="./img/icons/cross.svg" alt="Закрытие окна">
                     </div>

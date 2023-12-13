@@ -344,7 +344,7 @@ button {
   display: none;
 }
 .app .popup {
-  max-width: 424px;
+  width: 600px;
   background-color: #fff;
   padding: 22px 22px 42px;
   border-radius: 10px;
@@ -420,7 +420,7 @@ button {
 }
 .app .popup__form {
   margin: 18px 0;
-  width: 380px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -432,9 +432,7 @@ button {
 }
 .app .popup__form input {
   border: none;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  width: 100%;
   border-radius: 9px;
   border: 1px solid #E7EBFB;
   font-family: inherit;
@@ -458,6 +456,9 @@ button {
 }
 .app .popup__form input::placeholder {
   color: #9ea6ad;
+}
+.app .popup__form input.error {
+  border: 1px solid red;
 }
 .app .popup .cover-button {
   font-size: 13px;
