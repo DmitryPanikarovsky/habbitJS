@@ -419,7 +419,7 @@ button {
           filter: brightness(0) invert(1);
 }
 .app .popup__form {
-  margin: 18px 0;
+  margin: 18px 0 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -461,6 +461,7 @@ button {
   border: 1px solid red;
 }
 .app .popup .cover-button {
+  margin-top: 30px;
   font-size: 13px;
   line-height: 15px;
   font-weight: 500;
